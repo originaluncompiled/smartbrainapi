@@ -1,6 +1,6 @@
 {
   "name": "smartbrainapi",
-  "version": "1.0.0",
+  "version": "20.14.0",
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js"
