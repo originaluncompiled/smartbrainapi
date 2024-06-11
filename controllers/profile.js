@@ -1,4 +1,4 @@
-const handleProfile = (request, response) => {
+const handleProfile = (request, response, db) => {
     const { id } = request.params;
     db.select('*').from('users').where({id})
     .then(user => {
