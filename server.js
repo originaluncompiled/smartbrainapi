@@ -25,7 +25,7 @@ const db = knex({
     connection: 'postgres://postgres.yxrcjejgusfnklhyewbl:yw35!9NsvT6MBLN@aws-0-eu-central-1.pooler.supabase.com:6543/postgres'
 });
 
-app.get('/', (request, response) => { response.send(database.users)})
+app.get('/', (request, response) => { response.send('its working boss')}) //database.users
 app.post('/signin', (request, response) => { handleSignIn(request, response, db, bcrypt) })
 app.post('/register', (request, response) => { handleRegister(request, response, db, bcrypt) })
 app.get('/profile/:id', (request, response) => { handleProfile(request, response, db) })
