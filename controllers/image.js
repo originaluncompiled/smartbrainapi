@@ -42,9 +42,9 @@ const handleApiCall = (request, response) => {
         .catch(error => response.status(400).json('Unable to do API call'))
 }
 
-const handleImage = (request, response, db) => {
+const handleImage = (request, response, supabase) => {
     const { id } = request.body;
-    db('users').where('id', '=', id)
+    supabase('users').where('id', '=', id)
     .increment('entries', 1)
     .returning('entries')
     .then(entries => {

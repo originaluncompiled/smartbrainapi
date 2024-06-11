@@ -1,11 +1,11 @@
-const handleRegister = (request, response, db, bcrypt) => {
+const handleRegister = (request, response, supabase, bcrypt) => {
     const { email, name, password } = request.body;
     if (!email || !name || !password) {
         return response.status(400).json('Invalid Details');
     }
     let salt = bcrypt.genSaltSync(10);
     let hash = bcrypt.hashSync(password, salt);
-    db.transaction(trx => {
+    supabase.transaction(trx => {
         trx.insert({
             hash: hash,
             email: email
