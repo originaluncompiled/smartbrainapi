@@ -4,15 +4,12 @@ import bcrypt from 'bcrypt';
 import cors from 'cors';
 // import knex from 'knex';
 
-require('dotenv').config();
-
 import handleRegister from './controllers/register.js';
 import handleProfile from './controllers/profile.js';
 import handleSignIn from './controllers/signin.js';
 import { handleImage, handleApiCall } from './controllers/image.js';
 
 const supabaseUrl = process.env.SUPABASE_URL
-const supabaseKey = process.env.SUPBASE_KEY
 const serviceKey = process.env.SERVICE_KEY
 
 const supabase = createClient(supabaseUrl, serviceKey)
