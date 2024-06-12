@@ -17,7 +17,7 @@ const db = knex({
         port: 5432,
         user: RENDER_DB_USER,
         password: RENDER_DB_PASSWORD,
-        database: RENDER_DB_NAME,
+        database: RENDER_DB_NAME
     }
 });
 
