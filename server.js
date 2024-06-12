@@ -4,15 +4,18 @@ import bcrypt from 'bcrypt';
 import cors from 'cors';
 // import knex from 'knex';
 
+require('dotenv').config();
+
 import handleRegister from './controllers/register.js';
 import handleProfile from './controllers/profile.js';
 import handleSignIn from './controllers/signin.js';
 import { handleImage, handleApiCall } from './controllers/image.js';
 
-const supabaseUrl = 'https://yxrcjejgusfnklhyewbl.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl4cmNqZWpndXNmbmtsaHlld2JsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTgxMTQxNDYsImV4cCI6MjAzMzY5MDE0Nn0.-NjOTI3MjhQZmurEGecYvP1dXjV3uxCrQ9FTMrEeogY';
+const supabaseUrl = process.env.SUPABASE_URL
+const supabaseKey = process.env.SUPBASE_KEY
+const serviceKey = process.env.SERVICE_KEY
 
-const supabase = createClient(supabaseUrl, supabaseKey);
+const supabase = createClient(supabaseUrl, serviceKey)
 
 const app = express();
 
