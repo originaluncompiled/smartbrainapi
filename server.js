@@ -11,11 +11,11 @@ import { handleImage, handleApiCall } from './controllers/image.js';
 const db = knex({
     client: 'pg',
     connection: {
-        host: 'dpg-cpkp637sc6pc73f1o010-a',
+        host: RENDER_DB_HOST,
         port: 5432,
-        user: 'smartbraindb_mszn_user',
-        password: '3v59AG5M0rOZo8h0vXbsfDg3qQnev5ih',
-        database: 'smartbraindb_mszn'
+        user: RENDER_DB_USER,
+        password: RENDER_DB_PASSWORD,
+        database: RENDER_DB_NAME
     }
 });
 
