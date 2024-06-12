@@ -1,6 +1,6 @@
-const handleProfile = (request, response, supabase) => {
+const handleProfile = (request, response, db) => {
     const { id } = request.params;
-    supabase.select('*').from('users').where({id})
+    db.select('*').from('users').where({id})
     .then(user => {
         if (user.length) {
             response.json(user[0])
