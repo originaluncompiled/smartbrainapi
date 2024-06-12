@@ -8,6 +8,8 @@ import handleProfile from './controllers/profile.js';
 import handleSignIn from './controllers/signin.js';
 import { handleImage, handleApiCall } from './controllers/image.js';
 
+const { RENDER_DB_HOST, RENDER_DB_USER, RENDER_DB_PASSWORD,RENDER_DB_NAME, PORT } = process.env;
+
 const db = knex({
     client: 'pg',
     connection: {
@@ -31,6 +33,6 @@ app.get('/profile/:id', (request, response) => { handleProfile(request, response
 app.put('/image', (request, response) => { handleImage(request, response, db) })
 app.post('/imageurl', (request, response) => { handleApiCall(request, response) })
 
-app.listen(process.env.PORT, () => {
-    console.log(`App is running on port ${process.env.PORT}`);
+app.listen(PORT, () => {
+    console.log(`App is running on port ${PORT}`);
 });
