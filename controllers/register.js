@@ -15,6 +15,7 @@ const handleRegister = (request, response, supabase, bcrypt) => {
                 hash: hash
             })
             .returning('email')
+            .then(console.log)
             .then(loginEmail => {
                 return supabase
                     .from('users')
@@ -24,9 +25,11 @@ const handleRegister = (request, response, supabase, bcrypt) => {
                         name: name,
                         joined: new Date()
                     })
+                    .then(console.log)
                     .then(user => {
                         response.json(user[0]);
                     })
+                    .then(console.log)
             })
     })
     .catch(err => response.status(400).json('Cannot register account'))
