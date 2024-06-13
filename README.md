@@ -4,12 +4,6 @@ A REST api to handle calls to & from the SmartBrain™ database and frontend.
 
 The Final [ZTM](https://zerotomastery.io/) *Complete Web Developer* Project
 
-#### Differences Compared to the Course:
-- Multiple Face support;
-- Face counter;
-- Inability to spam buttons (User has to wait for a request to return before sending another);
-- A more pleasant design.
-
 
 ---
 
