@@ -8,16 +8,16 @@ import handleProfile from './controllers/profile.js';
 import handleSignIn from './controllers/signin.js';
 import { handleImage, handleApiCall } from './controllers/image.js';
 
-const { RENDER_DB_HOST, RENDER_DB_USER, RENDER_DB_PASSWORD,RENDER_DB_NAME, PORT } = process.env;
+const { DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT, PORT } = process.env;
 
 const db = knex({
     client: 'pg',
     connection: {
-        host: RENDER_DB_HOST,
-        port: 5432,
-        user: RENDER_DB_USER,
-        password: RENDER_DB_PASSWORD,
-        database: RENDER_DB_NAME
+        host: DB_HOST,
+        port: DB_PORT,
+        user: DB_USER,
+        password: DB_PASSWORD,
+        database: DB_NAME
     }
 });
 
