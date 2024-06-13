@@ -14,9 +14,9 @@ The Final [ZTM](https://zerotomastery.io/) *Complete Web Developer* Project
 ---
 
 
-**Use this app [HERE](https://originaluncompiled.github.io/smartbrain/)**
+**Use the app [HERE](https://originaluncompiled.github.io/smartbrain/)**!
 
-** **NOTE:** It can take upwards of a minute for the *Render* server and *SupaBase* database to spin up after inactivity
+__** NOTE:__ It can take upwards of a minute for the *Render* server and *SupaBase* database to spin up after inactivity
 
 
 ---
